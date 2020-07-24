@@ -20,3 +20,22 @@ class SerialGenerator:
     >>> serial.generate()
     100
     """
+
+    def __init__(self, start):
+        """Make a new number generator that starts at start"""
+        self.start = start
+        self.current_value = start
+
+    def __repr__(self):
+        """Show a representation of the class"""
+        return f"Generator of consecutive numbers starting at {self.start}"
+
+    def generate(self):
+        """Return the next number in the sequence"""
+        result = self.current_value
+        self.current_value += 1
+        return result
+
+    def reset(self):
+        """Reset the value back to original start value"""
+        self.current_value = self.start
