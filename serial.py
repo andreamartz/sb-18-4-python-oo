@@ -28,7 +28,7 @@ class SerialGenerator:
 
     def __repr__(self):
         """Show a representation of the class"""
-        return f"Generator of consecutive numbers starting at {self.start}"
+        return f"SerialGenerator(start={self.start})"
 
     def generate(self):
         """Return the next number in the sequence"""
